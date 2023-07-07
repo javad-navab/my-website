@@ -1,0 +1,889 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>
+    Eventbrite - Discover Great Events or Create Your Own & Sell Tickets</title>
+</head>
+<link rel="shortcut icon" href="https://cdn.evbstatic.com/s3-build/prod/1271442-rc2023-05-30_16.04-3a9e3d8/django/images/favicons/favicon-32x32.png" type="image/x-icon">
+<body class="container 2xl">
+<header class="bg-white h-[72px]">
+    <div class="flex items-center">
+        <a href="" class="w-28 mx-6 fill-orange-500">
+            <i class="" title="Eventbrite" data-spec="icon" data-testid="icon" "><svg viewBox="0 0 200 36"><g fill-rule="evenodd"><g><g transform="translate(.347)"><path d="M185.945 17.513c2.693-.61 5.381.495 6.878 2.584l-11.905 2.693c.411-2.52 2.333-4.668 5.027-5.277zm6.944 9.91a6.57 6.57 0 01-3.979 2.679c-2.711.614-5.417-.51-6.908-2.626l11.942-2.702 1.945-.44 3.719-.841a11.782 11.782 0 00-.31-2.372c-1.513-6.426-8.055-10.432-14.611-8.949-6.556 1.484-10.644 7.896-9.13 14.321 1.513 6.426 8.055 10.433 14.61 8.95 3.864-.875 6.869-3.46 8.377-6.751l-5.655-1.269z"></path><path id="logo-wordmark-brand_svg__Fill-10" d="M164.788 35.118V18.082h-3.677v-5.804h3.677V4.289h6.244v7.989h4.69v5.804h-4.69v17.036z"></path><path d="M152.86 35.118h6.03v-22.84h-6.03v22.84zm-.785-30.853c0-2.114 1.667-3.7 3.825-3.7 2.157 0 3.775 1.586 3.775 3.7 0 2.115-1.618 3.748-3.775 3.748-2.158 0-3.825-1.633-3.825-3.748zM150.76 12.342c-3.082.16-4.9.633-6.75 1.973v-2.037h-6.026v22.84h6.026v-11.2c0-3.524.86-5.529 6.75-5.726v-5.85zM117.16 24.057c.15 3.333 3.051 6.128 6.602 6.128 3.601 0 6.552-2.942 6.552-6.422 0-3.432-2.95-6.373-6.552-6.373-3.551 0-6.452 2.843-6.602 6.128v.539zm-5.88 11.061V1.38l6.03-1.364v13.962c1.863-1.49 4.07-2.115 6.472-2.115 6.864 0 12.355 5.286 12.355 11.918 0 6.583-5.491 11.965-12.355 11.965-2.403 0-4.609-.624-6.472-2.114v1.487h-6.03z"></path><path id="logo-wordmark-brand_svg__Fill-1" d="M98.445 35.118V17.965h-3.677v-5.687h3.677V4.283l6.244-1.413v9.408h4.69v5.687h-4.69v17.153z"></path><path d="M87.394 35.118V22.915c0-4.421-2.402-5.382-4.805-5.382-2.402 0-4.805.913-4.805 5.286v12.299h-6.03v-22.84h6.03v1.699c1.324-.961 2.942-2.115 6.13-2.115 5.098 0 9.51 2.932 9.51 10.092v13.164h-6.03zM56.484 17.513c2.694-.61 5.382.495 6.878 2.584L51.458 22.79c.41-2.52 2.332-4.668 5.026-5.277zm6.945 9.91a6.57 6.57 0 01-3.98 2.679c-2.711.614-5.416-.51-6.907-2.626l11.942-2.702 1.944-.44 3.72-.841a11.782 11.782 0 00-.31-2.372c-1.514-6.426-8.056-10.432-14.612-8.949-6.556 1.484-10.644 7.896-9.13 14.321 1.513 6.426 8.055 10.433 14.611 8.95 3.863-.875 6.868-3.46 8.376-6.751l-5.654-1.269z"></path><path id="logo-wordmark-brand_svg__Fill-2" d="M31.89 35.118l-9.364-22.84h6.57l5.932 15.49 5.982-15.49h6.57l-9.365 22.84z"></path><path d="M10.703 17.507c2.694-.61 5.382.495 6.878 2.584L5.677 22.785c.41-2.52 2.332-4.668 5.026-5.278zm6.945 9.91a6.57 6.57 0 01-3.98 2.68c-2.71.613-5.416-.51-6.907-2.626l11.942-2.702 1.945-.44 3.718-.842a11.782 11.782 0 00-.31-2.371c-1.513-6.426-8.055-10.433-14.61-8.95C2.888 13.65-1.2 20.063.314 26.489c1.514 6.426 8.055 10.432 14.611 8.949 3.864-.874 6.869-3.46 8.376-6.75l-5.654-1.27z"></path></g></g></g></svg><span class="hidden">Eventbrite</span></i>
+        </a>
+        <div class="w-[852px]">
+            <input type="text" name="#" id="#" placeholder="Search events" class="bg-zinc-100 w-[470px] h-12 pl-[14px]">
+        </div>
+        <div class="flex text-[13px] text-[#39364f] font-semibold items-center ">
+            <div class="flex">
+                <a href="#" class="flex items-center px-5 h-[72px] hover:bg-zinc-100">
+                    <span>Organize</span>
+                    <span>
+                        <svg class="w-[24px] h-[24px] fill-zinc-300" xml:space="preserve"><path id="chevron-down-chunky_svg__eds-icon--chevron-down-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M7 10.2l5 5 5-5-1.4-1.4-3.6 3.6-3.6-3.6z"></path></svg>
+                    </span>
+                </a>
+                <a href="#" class="flex items-center px-5 h-[72px] hover:bg-zinc-100">
+                    <span>Help</span>
+                    <span>
+                        <svg class="w-[24px] h-[24px] fill-zinc-300" xml:space="preserve"><path id="chevron-down-chunky_svg__eds-icon--chevron-down-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M7 10.2l5 5 5-5-1.4-1.4-3.6 3.6-3.6-3.6z"></path></svg>
+                    </span>
+                </a>
+            </div>
+            <a class="px-5 h-[72px] text-sky-600 hover:bg-zinc-100 pt-7" href="#">Create an event</a>
+            <div class="flex">
+                <a href="#" class="flex items-center px-5 h-[72px] hover:bg-zinc-100">
+                    <span>Log In</span>
+                </a>
+                <a href="#" class="flex items-center px-5 h-[72px] hover:bg-zinc-100">
+                    <span>Sign Up</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="box-border">
+        <div class="m-0 h-[480px]">
+            <img src="https://cdn.evbstatic.com/s3-build/fe/build/images/6c5d49c679ae35c60ad2a035492632d3-1_tablet_1067x470.jpg" alt="#" srcset="https://cdn.evbstatic.com/s3-build/fe/build/images/6c5d49c679ae35c60ad2a035492632d3-1_tablet_1067x470.jpg">
+            <div class="px-4 relative bottom-20">
+                <div>
+                    <div class="px-12 mx-16">
+                        <h1 class="py-5">
+                            <div class="font-bold bg-[#d1410c] flex items-center h-[44px] w-[170px] rounded">
+                                <a href="#" class=" text-[#FFF] py-[12px] px-[18px] font-semibold">
+                                    <div class="text-sm">Find your next event</div>
+                                </a>
+                            </div>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="px-[50px] mx-[73px]">
+            <div class="mx-[12px]">
+                <div class="px-4 pt-4 flex">
+                    <div class="font-black text-3xl text-[#39364f]">Popular in </div>
+                    <div class="flex">
+                        <svg class="h-[48px] w-[48px] fill-[#3659e3]" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 10.2l5 5 5-5-1.4-1.4-3.6 3.6-3.6-3.6z"></path></svg>
+                        <input type="text" value="paris" class="text-[#3659e3] py-[12px] pl-[6px] relative bottom-4 text-[30px] font-black">
+                    </div>
+                </div>
+                <div class="p-0">
+                    <div>
+                        <nav class="px-4">
+                            <ul class="pb-4 flex">
+                                <li class="pl-0 pr-4">
+                                    <button class="py-3 text-[#6f7287] hover:text-[#1e0a3c] hover:border-b hover:border-[#1e0a3c]">
+                                        <span class="text-sm font-semibold">All</span>
+                                    </button>
+                                </li>
+                                <li class="px-4">
+                                    <button class="py-3 text-[#6f7287] hover:text-[#1e0a3c] hover:border-b hover:border-[#1e0a3c]">
+                                        <span class="text-sm font-semibold">For you</span>
+                                    </button>
+                                </li>
+                                <li class="px-4">
+                                    <button class="py-3 text-[#6f7287] hover:text-[#1e0a3c] hover:border-b hover:border-[#1e0a3c]">
+                                        <span class="text-sm font-semibold">Online</span>
+                                    </button>
+                                </li>
+                                <li class="px-4">
+                                    <button class="py-3 text-[#6f7287] hover:text-[#1e0a3c] hover:border-b hover:border-[#1e0a3c]">
+                                        <span class="text-sm font-semibold">Today</span>
+                                    </button>
+                                </li>
+                                <li class="px-4">
+                                    <button class="py-3 text-[#6f7287] hover:text-[#1e0a3c] hover:border-b hover:border-[#1e0a3c]">
+                                        <span class="text-sm font-semibold">This weekend</span>
+                                    </button>
+                                </li>
+                                <li class="px-4">
+                                    <button class="py-3 text-[#6f7287] hover:text-[#1e0a3c] hover:border-b hover:border-[#1e0a3c]">
+                                        <span class="text-sm font-semibold">Memorial Day</span>
+                                    </button>
+                                </li>
+                                <li class="px-4">
+                                    <button class="py-3 text-[#6f7287] hover:text-[#1e0a3c] hover:border-b hover:border-[#1e0a3c]">
+                                        <span class="text-sm font-semibold">Mental Health Awareness Month</span>
+                                    </button>
+                                </li>
+                                <li class="px-4">
+                                    <button class="py-3 text-[#6f7287] hover:text-[#1e0a3c] hover:border-b hover:border-[#1e0a3c]">
+                                        <span class="text-sm font-semibold">Free</span>
+                                    </button>
+                                </li>
+                                <li class="px-4">
+                                    <button class="py-3 text-[#6f7287] hover:text-[#1e0a3c] hover:border-b hover:border-[#1e0a3c]">
+                                        <span class="text-sm font-semibold">Music</span>
+                                    </button>
+                                </li>
+                                <li class="px-4">
+                                    <button class="py-3 text-[#6f7287] hover:text-[#1e0a3c] hover:border-b hover:border-[#1e0a3c]">
+                                        <span class="text-sm font-semibold">Food & Drink</span>
+                                    </button>
+                                </li>
+                                <li class="px-4">
+                                    <button class="py-3 text-[#6f7287] hover:text-[#1e0a3c] hover:border-b hover:border-[#1e0a3c]">
+                                        <span class="text-sm font-semibold">Charity & Causes</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="px-4 pt-2">
+                    <h3 class="pb-4 text-2xl font-bold text-[#1e0a3c]">Check out trending categories</h3>
+                    <div class="grid grid-cols-4 gap-3">
+                        <a href="">
+                            <div class="flex border items-center bg-[#f8f7fa]">
+                                <aside class="relative top-[15px] left-[15px]"><i data-spec="icon" data-testid="icon" aria-hidden="true"><svg  class="h-[54px] w-[54px] fill-[#f05537] " xml:space="preserve"><path id="music-note_svg__eds-icon--music-note_base" fill-rule="evenodd" clip-rule="evenodd" d="M21 2L8 5.5v11.3c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V9.5l11-3v7.2c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V2zM6 21c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8.5V6.2l11-3v2.3l-11 3zm9 9.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg></i></aside>
+                                <div class="font-normal pl-4">Music</div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="flex border items-center bg-[#f8f7fa]">
+                                <aside class="relative top-[15px] left-[15px]"><i data-spec="icon" data-testid="icon" aria-hidden="true"><svg  class="h-[54px] w-[54px] fill-[#f05537] " xml:space="preserve"><path id="music-note_svg__eds-icon--music-note_base" fill-rule="evenodd" clip-rule="evenodd" d="M21 2L8 5.5v11.3c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V9.5l11-3v7.2c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V2zM6 21c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8.5V6.2l11-3v2.3l-11 3zm9 9.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg></i></aside>
+                                <div class="font-normal pl-4">Performing & Visual Arts</div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="flex border items-center bg-[#f8f7fa]">
+                                <aside class="relative top-[15px] left-[15px]"><i data-spec="icon" data-testid="icon" aria-hidden="true"><svg  class="h-[54px] w-[54px] fill-[#f05537] " xml:space="preserve"><path id="music-note_svg__eds-icon--music-note_base" fill-rule="evenodd" clip-rule="evenodd" d="M21 2L8 5.5v11.3c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V9.5l11-3v7.2c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V2zM6 21c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8.5V6.2l11-3v2.3l-11 3zm9 9.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg></i></aside>
+                                <div class="font-normal pl-4">Holiday</div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="flex border items-center bg-[#f8f7fa]">
+                                <aside class="relative top-[15px] left-[15px]"><i data-spec="icon" data-testid="icon" aria-hidden="true"><svg  class="h-[54px] w-[54px] fill-[#f05537] " xml:space="preserve"><path id="music-note_svg__eds-icon--music-note_base" fill-rule="evenodd" clip-rule="evenodd" d="M21 2L8 5.5v11.3c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V9.5l11-3v7.2c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V2zM6 21c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8.5V6.2l11-3v2.3l-11 3zm9 9.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg></i></aside>
+                                <div class="font-normal pl-4">Health</div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="flex border items-center bg-[#f8f7fa]">
+                                <aside class="relative top-[15px] left-[15px]"><i data-spec="icon" data-testid="icon" aria-hidden="true"><svg  class="h-[54px] w-[54px] fill-[#f05537] " xml:space="preserve"><path id="music-note_svg__eds-icon--music-note_base" fill-rule="evenodd" clip-rule="evenodd" d="M21 2L8 5.5v11.3c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V9.5l11-3v7.2c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V2zM6 21c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8.5V6.2l11-3v2.3l-11 3zm9 9.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg></i></aside>
+                                <div class="font-normal pl-4">Hobbies</div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="flex border items-center bg-[#f8f7fa]">
+                                <aside class="relative top-[15px] left-[15px]"><i data-spec="icon" data-testid="icon" aria-hidden="true"><svg  class="h-[54px] w-[54px] fill-[#f05537] " xml:space="preserve"><path id="music-note_svg__eds-icon--music-note_base" fill-rule="evenodd" clip-rule="evenodd" d="M21 2L8 5.5v11.3c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V9.5l11-3v7.2c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V2zM6 21c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8.5V6.2l11-3v2.3l-11 3zm9 9.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg></i></aside>
+                                <div class="font-normal pl-4">Business</div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="flex border items-center bg-[#f8f7fa]">
+                                <aside class="relative top-[15px] left-[15px]"><i data-spec="icon" data-testid="icon" aria-hidden="true"><svg  class="h-[54px] w-[54px] fill-[#f05537] " xml:space="preserve"><path id="music-note_svg__eds-icon--music-note_base" fill-rule="evenodd" clip-rule="evenodd" d="M21 2L8 5.5v11.3c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V9.5l11-3v7.2c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V2zM6 21c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8.5V6.2l11-3v2.3l-11 3zm9 9.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg></i></aside>
+                                <div class="font-normal pl-4">Food & Drink</div>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="flex border items-center bg-[#f8f7fa]">
+                                <aside class="relative top-[15px] left-[15px]"><i data-spec="icon" data-testid="icon" aria-hidden="true"><svg  class="h-[54px] w-[54px] fill-[#f05537] " xml:space="preserve"><path id="music-note_svg__eds-icon--music-note_base" fill-rule="evenodd" clip-rule="evenodd" d="M21 2L8 5.5v11.3c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V9.5l11-3v7.2c-.5-.5-1.2-.8-2-.8-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3V2zM6 21c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8.5V6.2l11-3v2.3l-11 3zm9 9.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg></i></aside>
+                                <div class="font-normal pl-4">Sports & Fitness</div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <section class="pb-[140px]">
+                        <div class="pt-10">
+                            <div class="flex flex-wrap">
+                                <div class="px-3">
+                                    <h3 class="text-[#1e0a3c] text-2xl font-bold">Events in Paris</h3>
+                                </div>
+
+                                <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                                    <div >
+                                        <a class="h-[100%] block" href="">
+                                            <div class="h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F461565399%2F1430165798603%2F1%2Foriginal.20230306-095340?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1200%2C600&s=d4aa3ddf1cbe11e196bea50cc43dcbc6" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full  p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">Festival Chilowé 2023</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">Fondation GoodPlanet • Paris</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Free</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>Chilowé
+                                                                        <div class="flex">
+                                                                            <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i>
+                                                                            <span class="px-1"></span>
+                                                                            <span>175 followers</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div>
+                                        <a href="">
+                                            <div class=" h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F519258439%2F1500750678143%2F1%2Foriginal.20230521-132304?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C150%2C2000%2C1000&s=2e64ebf900e4baff8132ca97cdeb8413" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">Rooftop Molitor - 9 juin / DJ set avec Yanmez</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">6 Av. de la Prte Molitor • Paris</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Free</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>Molitor Paris
+                                                                        <div class="flex">
+                                                                            <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i>
+                                                                            <span class="px-1"></span>
+                                                                            <span>306 followers</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div>
+                                        <a href="">
+                                            <div class="h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F514727599%2F171590487928%2F1%2Foriginal.20230515-090249?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=148%2C0%2C700%2C350&s=bd5fe97320a5a9ccfff743ba7694f48e" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">Festival Génération Impact - Édition 2023</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">Ground Control • Paris</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Free</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>Live for Good
+                                                                        <div class="flex">
+                                                                            <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i>
+                                                                            <span class="px-1"></span>
+                                                                            <span>339 followers</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div>
+                                        <a href="">
+                                            <div class="h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F510304049%2F1521798337593%2F1%2Foriginal.20230508-211708?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=8%2C0%2C728%2C364&s=b714a4ca1c44c85534617cc6ed8b54fb" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">Tous Eloquents-Quand la parole libère le pouvoir d'être unique! - Grand Rex</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">Le Grand Rex • Paris</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Free</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>Eloquence de la Différence
+                                                                        <div class="flex">
+                                                                            <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i>
+                                                                            <span class="px-1"></span>
+                                                                            <span>35 followers</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div class="py-10">
+                                        <a href="">
+                                            <div class="h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F446096499%2F1364243822493%2F1%2Foriginal.20230214-164401?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C13%2C1200%2C600&s=1c2a3c143715e1f4b283cce52640c10c" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">Metaverse Summit 2023 Paris, France (Pre-registration)</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">Paris • Paris</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Free</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>Metaverse Summit
+                                                                        <div class="flex">
+                                                                            <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i>
+                                                                            <span class="px-1"></span>
+                                                                            <span>1.5K followers</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div class="py-10">
+                                        <a href="">
+                                            <div class="h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F115307149%2F214678898144%2F1%2Foriginal.20201020-202958?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C800%2C400&s=58d7c4567ba1c0342efc0d90af448d29" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">The Great British American Comedy Night</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">Goku Comedy Club • Paris</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Free</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>
+                                                                        <div class="flex">
+                                                                            <!-- <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i> -->
+                                                                            <span class="px-1"></span>
+                                                                            <span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div class="py-10">
+                                        <a href="">
+                                            <div class="h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F515793229%2F1328460409803%2F1%2Foriginal.20230516-130350?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C6%2C1280%2C640&s=8c4e852f026eb538e91ef25e592d54d1" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">Exploser ses barrières mentales ft. Camille Buss</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">54 Rue de Lancry • Paris</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Free</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>Flomodia
+                                                                        <div class="flex">
+                                                                            <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i>
+                                                                            <span class="px-1"></span>
+                                                                            <span>528 followers</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div class="py-10">
+                                        <a href="">
+                                            <div class="h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F485096859%2F1307774132443%2F1%2Foriginal.20230404-154429?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1080%2C540&s=403ae2bb3d2042737ffdede3a1e1d134" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">Bal Masqué Gossip Girl (Hits 2000s +High School Musical/Camp Rock) - Paris</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">Paris • Paris Centre</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Free</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>Infinity Teen Pop
+                                                                        <div class="flex">
+                                                                            <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i>
+                                                                            <span class="px-1"></span>
+                                                                            <span>155 followers</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                </div>
+                                <hr  class="h-[8px] bg-[#f8f7fa]">
+                                <div class="flex flex-wrap">
+                                    <div class="px-3">
+                                        <h3 class="text-[#1e0a3c] text-2xl font-bold">More events</h3>
+                                    </div>
+                                </div>
+                                <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                                    <div class="py-10">
+                                        <a href="">
+                                            <div class="h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F485096859%2F1307774132443%2F1%2Foriginal.20230404-154429?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1080%2C540&s=403ae2bb3d2042737ffdede3a1e1d134" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">Bal Masqué Gossip Girl (Hits 2000s +High School Musical/Camp Rock) - Paris</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div class="text-sm pt-2 pb-1 text-[#d1410c] font-semibold">Tomorrow at 8:00 PM</div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">Paris • Paris Centre</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Starts at €15.00</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>Infinity Teen Pop
+                                                                        <div class="flex">
+                                                                            <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i>
+                                                                            <span class="px-1"></span>
+                                                                            <span>155 followers</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div class="py-10">
+                                        <a href="">
+                                            <div class="h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F486351919%2F241340846428%2F1%2Foriginal.20230405-203318?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C1076%2C538&s=6464a1a5149036582a10dcb6590a82e3" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">Souveraineté Numérique : Impacts et enjeux pour nos entreprises</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div class="text-sm pt-2 pb-1 text-[#d1410c] font-semibold">Tue, Jun 6, 7:00 PM</div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">TASMANE • Paris</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Free</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>Alumni MSIT
+                                                                        <div class="flex">
+                                                                            <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i>
+                                                                            <span class="px-1"></span>
+                                                                            <span>22 followers</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div class="py-10">
+                                        <a href="">
+                                            <div class="h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F474218959%2F1460917584743%2F1%2Foriginal.20230321-155555?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=21%2C0%2C1202%2C601&s=6fafb60748a3db97f6f96481d0447ce4" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">DEEPTECH FORUM</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div class="text-sm pt-2 pb-1 text-[#d1410c] font-semibold">Mon, Jun 19, 8:00 AM</div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">PariSanté Campus • Issy-les-Moulineaux</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Free</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>MINES Paris - PSL
+                                                                        <div class="flex">
+                                                                            <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i>
+                                                                            <span class="px-1"></span>
+                                                                            <span>55 followers</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div class="py-10">
+                                        <a href="">
+                                            <div class="h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F506634899%2F233082431372%2F1%2Foriginal.20230503-141136?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C41%2C1200%2C600&s=0f8c5f7822cb580e8aec6fd5ad240f61" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">Hardware Night</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div class="text-sm pt-2 pb-1 text-[#d1410c] font-semibold">Wed, Jun 14, 4:00 PM</div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">Kickmaker • Paris</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Free</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>Kickmaker
+                                                                        <div class="flex">
+                                                                            <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i>
+                                                                            <span class="px-1"></span>
+                                                                            <span>55 followers</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div class="py-10">
+                                        <a href="">
+                                            <div class="h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F522485909%2F1500750678143%2F1%2Foriginal.20230525-130106?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C161%2C2000%2C1000&s=d458c6d11f66e552db9708b291a61d9c" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">Rooftop Molitor - 3 juin / DJ set avec AdrienBoo</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div class="text-sm pt-2 pb-1 text-[#d1410c] font-semibold">Tomorrow at 8:30 PM</div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">6 Av. de la Prte Molitor • Paris</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Free</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>Molitor Paris
+                                                                        <div class="flex">
+                                                                            <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i>
+                                                                            <span class="px-1"></span>
+                                                                            <span>306 followers</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div class="py-10">
+                                        <a href="">
+                                            <div class="h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F490099729%2F204738809200%2F1%2Foriginal.20230411-171707?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=200%2C0%2C2880%2C1440&s=38f49c3bcf43ce866c62e61a2058766a" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">Romance Author & Reader Events presents RARE24Paris</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div class="text-sm pt-2 pb-1 text-[#d1410c] font-semibold">Sat, Apr 6, 9:30 AM</div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">Le Palais des Congrès de Paris • Paris</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Starts at $56.75</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>Romance Author & Reader Events RARE
+                                                                        <div class="flex">
+                                                                            <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i>
+                                                                            <span class="px-1"></span>
+                                                                            <span>4.7k followers</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div class="py-10">
+                                        <a href="">
+                                            <div class="h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F406212409%2F906652831653%2F1%2Foriginal.20221004-140020?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C60%2C1920%2C960&s=d3696c904cc8653fa233ea5c74f5c8b7" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">Web 3.0 Community Meetup</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div class="text-sm pt-2 pb-1 text-[#d1410c] font-semibold">Thu, Jun 8, 7:00 PM + 16 more events</div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">LES PLANQUES • Paris</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Free</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>Nec Mergitur
+                                                                        <div class="flex">
+                                                                            <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i>
+                                                                            <span class="px-1"></span>
+                                                                            <span>229 followers</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                    <div class="py-10">
+                                        <a href="">
+                                            <div class="h-[100%] hover:shadow-xl">
+                                                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F512548339%2F446654944658%2F1%2Foriginal.20230511-083942?w=512&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=e130c7824cc7844376a4e5e217ea85d1" alt="">
+                                                <div class="px-4">
+                                                    <span class="rounded-full p-px border-[#dbdae3] border flex flex-wrap h-[40px] w-[40px] items-center justify-center relative bottom-[20px] left-[210px] bg-[#FFF]">
+                                                        <i class="h-[24px] w-[24px] content-center" title="" data-spec="icon" data-testid="icon"><svg class="fill-[#39364f] h-[24px] w-[24px]" xml:space="preserve"><path id="heart-chunky_svg__eds-icon--heart-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M18.8 6.2C18.1 5.4 17 5 16 5c-1 0-2 .4-2.8 1.2L12 7.4l-1.2-1.2C10 5.4 9 5 8 5c-1 0-2 .4-2.8 1.2-1.5 1.6-1.5 4.2 0 5.8l6.8 7 6.8-7c1.6-1.6 1.6-4.2 0-5.8zm-1.4 4.4L12 16.1l-5.4-5.5c-.8-.8-.8-2.2 0-3C7 7.2 7.5 7 8 7c.5 0 1 .2 1.4.6l2.6 2.7 2.7-2.7c.3-.4.8-.6 1.3-.6s1 .2 1.4.6c.8.8.8 2.2 0 3z"></path></svg><span class="eds-is-hidden-accessible cz-color-6507851"></span></i>
+                                                    </span>
+                                                    <h3 class="text-[#39364f] font-bold text-lg">Grande Vente de Plantes - Paris 15</h3>
+                                                    <div class="pt-2 pb-1"></div>
+                                                    <div class="text-sm pt-2 pb-1 text-[#d1410c] font-semibold">Fri, Jun 9, 11:00 AM</div>
+                                                    <div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">
+                                                            <div class="">Le Tripot Régnier • Paris</div>
+                                                        </div>
+                                                        <div class="text-[#6f7287] text-sm font-normal mt-1">Free</div>
+                                                        <div class="mt-1">
+                                                            <div>
+                                                                <div class="pt-1 text-[#39364f] font-bold">
+                                                                    <div>Plantes pour Tous
+                                                                        <div class="flex">
+                                                                            <i class="flex h-[20px] w-[20px]" data-spec="icon" data-testid="icon" aria-hidden="true"><svg class="h-[20px] w-[20px]" xml:space="preserve"><path id="user-chunky_svg__eds-icon--user-chunky_base" fill-rule="evenodd" clip-rule="evenodd" d="M12 18c-1.2 0-2.4-.3-3.5-.7.6-1.3 2-2.2 3.5-2.2s2.9.9 3.5 2.2c-1.1.4-2.3.7-3.5.7zm6.5-2.9c-.4.4-.8.8-1.3 1.1a5.989 5.989 0 00-10.6 0c-.5-.3-.9-.7-1.3-1.1L4 16.5c2.1 2.3 5 3.5 8 3.5s5.9-1.3 8-3.5l-1.5-1.4z"></path><path id="user-chunky_svg__eds-icon--user-chunky_circle" fill-rule="evenodd" clip-rule="evenodd" d="M12 4C9.7 4 7.8 5.9 7.8 8.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2S14.3 4 12 4zm0 6.4c-1.2 0-2.2-1-2.2-2.2C9.8 7 10.8 6 12 6s2.2 1 2.2 2.2c0 1.2-1 2.2-2.2 2.2z"></path></svg></i>
+                                                                            <span class="px-1"></span>
+                                                                            <span>37.5K followers</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>    
+                                    </div>
+                                </div>
+                                <div class="mt-2 mx-auto flex ">
+                                    <div class="w-[450px] h-[44px] border-2 border-[#39364f] rounded flex items-center justify-center">
+                                        <a href="">See more</a>
+                                    </div>
+                                </div> 
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="mx-auto text-[#dbdae3] w-[100%]">
+        <div class="bg-[#1e0a3c]">
+            <div class="pl-6 pt-4 text-xs  grid grid-cols-4 gap-x-6">
+                <div>
+                    <h3 class="py-2 text-sm">Use Eventbrite</h3>
+                    <ul class="py-2 list-none font-normal">
+                        <li class="pb-1">
+                            <a href="">Create Events</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Pricing</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Eventbrite Boost</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Eventbrite Mobile Ticket App</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Eventbrite Check-In App</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Eventbrite App Marketplace</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Event Registration Software</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Content Standards</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">FAQs</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Sitemap</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="py-2 text-sm">Plan Events</h3>
+                    <ul class="py-2 list-none font-normal">
+                        <li class="pb-1">
+                            <a href="">Sell Tickets Online</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Event Planning</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Sell Concert Tickets Online</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Event Payment System</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Solutions for Professional Services</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Event Management Software</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Community Engagement</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Virtual Events Platform</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">QR Codes for Event Check-In</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Post your event online</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="py-2 text-sm">Find Events</h3>
+                    <ul class="py-2 list-none font-normal">
+                        <li class="pb-1">
+                            <a href="">New Orleans Food & Drink Events</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">San Francisco Holiday Events</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Tulum Music Events</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Denver Hobby Events</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Atlanta Pop Music Events</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">New York Events</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Chicago Events</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Events in Dallas Today</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Los Angeles Events</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Washington Events</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="py-2 text-sm">Connect With Us</h3>
+                    <ul class="py-2 list-none font-normal">
+                        <li class="pb-1">
+                            <a href="">Contact Support</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Twitter</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Facebook</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Linkdin</a>
+                        </li>
+                        <li class="pb-1">
+                            <a href="">Instagram</a>
+                        </li>
+            </div>
+        </div>
+    </footer>
+</main>
+</body>
+</html>
