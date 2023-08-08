@@ -16,4 +16,4 @@ class post(models.Model):
     class Meta:
         ordering = ['-created_at']
     def __str__(self):
-        return "{} - {}".format(self.title , self.id)
+        return "{}".format(self.title)
