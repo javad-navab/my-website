@@ -515,6 +515,10 @@ mark,
   max-width: 100%;
   height: auto;
 }
+.img-next{
+  max-width: 100%;
+  height: 100px;
+}
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -632,6 +636,7 @@ pre code {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  justify-content: flex-end;
 }
 
 .no-gutters {

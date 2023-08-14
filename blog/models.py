@@ -23,4 +23,6 @@ class post(models.Model):
         ordering = ['-created_at']
     def __str__(self):
         return "{}".format(self.title)
+    # def snippets(self):
+    #     return self.content[:255] +'....'
     
