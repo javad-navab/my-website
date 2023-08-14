@@ -16,8 +16,8 @@ def blog_single(request , pid):
     posts.counted_views=posts.counted_views+1
     posts.save()
     posts = get_object_or_404(post,id=pid , status = True)
-    next = post.objects.filter(id__gt=pid).order_by('id').first()
-    pre = post.objects.filter(id__lt=pid).order_by('-id').first()
+    next = post.objects.filter(id__gt=pid , status = True).order_by('id').first()
+    pre = post.objects.filter(id__lt=pid  , status = True).order_by('-id').first()
     context = {'post':posts , 'next':next , 'pre':pre}
     return render(request,'blog/blog-single.html' , context)
 
