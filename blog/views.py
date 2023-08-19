@@ -1,12 +1,25 @@
 from django.shortcuts import render , get_object_or_404
 from blog.models import post
 import datetime
-from next_prev import next_in_order , prev_in_order
+from django.core.paginator import Paginator , EmptyPage , PageNotAnInteger
 
 # Create your views here.
-def blog(request):
+def blog(request , **kwargs):
     t = datetime.datetime.now()
     posts = post.objects.filter( status=True , published_at__lte=t)
+    if kwargs.get('cat_name'):
+        posts = posts.filter(category__name=kwargs['cat_name'])
+    if kwargs.get('author_username'):
+        posts = posts.filter(author__username=kwargs['author_username'])
+    posts = Paginator(posts ,2)
+    try:
+        page_number = request.GET.get('page')
+        posts = posts.get_page(page_number)
+    except PageNotAnInteger:
+        posts = posts.get_page(1)
+    except EmptyPage:
+        posts = posts.get_page(1)
+
     context = {'posts' : posts }
     return render(request,'blog/blog-home.html' , context)
 
@@ -21,8 +34,19 @@ def blog_single(request , pid):
     context = {'post':posts , 'next':next , 'pre':pre}
     return render(request,'blog/blog-single.html' , context)
 
-# def test(request , pid): 
-#     # posts = post.objects.get(id=pid)
-#     posts = get_object_or_404(post,pk=pid)
-#     context = {'post':posts}
-#     return render(request,'blog/test.html' , context)
+def test(request): 
+    return render(request , 'blog/test.html')
+
+def blog_category(request,cat_name):
+    posts = post.objects.filter(status=True)
+    posts = posts.filter(category__name=cat_name)
+    context = {'posts': posts }
+    return render(request,'blog/blog-home.html' , context)
+
+def blog_search(request,):
+    posts = post.objects.filter(status=True)
+    if request.method == 'GET':
+        if s:=request.GET.get('search'):
+            posts = posts.filter(content__contains=s)
+    context = {'posts': posts}
+    return render(request,'blog/blog-home.html' , context)
