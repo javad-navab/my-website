@@ -8,6 +8,7 @@ class contactadmin(admin.ModelAdmin):
     list_display = ('name', 'email' , 'subject' , 'created_at')
     list_filter = ('email',)
     search_fields = ['name', 'massage']
+    ordering = ('-created_at',)
 
 admin.site.register(contact,contactadmin)
 admin.site.register(newsletter)

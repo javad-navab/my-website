@@ -5,7 +5,7 @@ from django.db import models
 class contact(models.Model):
     name = models.CharField(max_length=255)
     email = models.EmailField(max_length=255)
-    subject = models.CharField(max_length=255 , blank=True)
+    subject = models.CharField(max_length=255 , null=True  , blank=True)
     massage = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
