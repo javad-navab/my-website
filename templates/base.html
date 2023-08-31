@@ -38,6 +38,11 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
   </head>
   <body>
+    {% if messages %}
+      {% for message in messages %}
+      {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+      {% endfor %}
+    {% endif %}
     <header id="header">
       <div class="header-top">
         <div class="container">
@@ -139,23 +144,24 @@
                 For business professionals caught between high OEM price and
                 mediocre print and graphic output.
               </p>
-              <div id="mc_embed_signup">
+              <div>
                 <form
-                  target="_blank"
-                  action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                  method="get"
+                
+                  action="{% url 'website:newsletter' %}"
+                  method="post"
                   class="subscription relative"
                 >
+                {% csrf_token %}
                   <div class="input-group d-flex flex-row">
                     <input
-                      name="EMAIL"
+                      name="email"
                       placeholder="Email Address"
                       onfocus="this.placeholder = ''"
                       onblur="this.placeholder = 'Email Address '"
                       required=""
                       type="email"
                     />
-                    <button class="btn bb-btn">
+                    <button class="btn bb-btn" type="submit">
                       <span class="lnr lnr-location"></span>
                     </button>
                   </div>
