@@ -1,8 +1,10 @@
 from django.shortcuts import render , get_object_or_404
-from blog.models import post
+from blog.models import post , comment
 from website.models import contact
 import datetime
 from django.core.paginator import Paginator , EmptyPage , PageNotAnInteger
+from blog.forms import commentForm
+from django.contrib import messages
 
 # Create your views here.
 def blog(request , **kwargs):
@@ -12,6 +14,8 @@ def blog(request , **kwargs):
         posts = posts.filter(category__name=kwargs['cat_name'])
     if kwargs.get('author_username'):
         posts = posts.filter(author__username=kwargs['author_username'])
+    if kwargs.get('tag_name'):
+        posts = posts.filter(tags__name__in=[kwargs['tag_name']])
     posts = Paginator(posts ,6)
     try:
         page_number = request.GET.get('page')
@@ -24,14 +28,23 @@ def blog(request , **kwargs):
     return render(request,'blog/blog-home.html' , context)
 
 def blog_single(request , pid):
+    if request.method == 'POST':
+        form = commentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.add_message(request,messages.SUCCESS , 'Comment posted successfully')
+        else:
+            messages.add_message(request,messages.ERROR , 'Comment not posted successfully')
     t = datetime.datetime.now()
     posts = post.objects.get(id=pid)
     posts.counted_views=posts.counted_views+1
     posts.save()
     posts = get_object_or_404(post,id=pid , status = True)
+    comments = comment.objects.filter(post = posts.id , approved = True )
+    form = commentForm()
     next = post.objects.filter(id__gt=pid , status = True).order_by('id').first()
     pre = post.objects.filter(id__lt=pid  , status = True).order_by('-id').first()
-    context = {'post':posts , 'next':next , 'pre':pre}
+    context = {'post':posts , 'next':next , 'pre':pre , 'comments':comments , 'form':form ,}
     return render(request,'blog/blog-single.html' , context)
 
 

@@ -1,5 +1,5 @@
 from django import template
-from blog.models import post
+from blog.models import post , comment
 from blog.models import category
 
 
@@ -26,6 +26,9 @@ def latestposts():
     posts = post.objects.filter(status = True).order_by('-published_at')[:4]
     return {'posts': posts}
 
+@register.simple_tag(name='comments_count')
+def function(pid):
+    return comment.objects.filter(post = pid , approved = True).count()
 
 @register.inclusion_tag('blog/blog-category.html')
 def postcategories():
