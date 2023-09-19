@@ -1,10 +1,12 @@
-from django.shortcuts import render , get_object_or_404
+from django.shortcuts import render , get_object_or_404 , redirect
 from blog.models import post , comment
 from website.models import contact
 import datetime
 from django.core.paginator import Paginator , EmptyPage , PageNotAnInteger
 from blog.forms import commentForm
 from django.contrib import messages
+from django.urls import reverse
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 def blog(request , **kwargs):
@@ -40,13 +42,15 @@ def blog_single(request , pid):
     posts.counted_views=posts.counted_views+1
     posts.save()
     posts = get_object_or_404(post,id=pid , status = True)
-    comments = comment.objects.filter(post = posts.id , approved = True )
-    form = commentForm()
-    next = post.objects.filter(id__gt=pid , status = True).order_by('id').first()
-    pre = post.objects.filter(id__lt=pid  , status = True).order_by('-id').first()
-    context = {'post':posts , 'next':next , 'pre':pre , 'comments':comments , 'form':form ,}
-    return render(request,'blog/blog-single.html' , context)
-
+    if not post.login_require:
+        next = post.objects.filter(id__gt=pid , status = True).order_by('id').first()
+        pre = post.objects.filter(id__lt=pid  , status = True).order_by('-id').first()
+        comments = comment.objects.filter(post = posts.id , approved = True )
+        form = commentForm()
+        context = {'post':posts , 'next':next , 'pre':pre , 'comments':comments , 'form':form ,}
+        return render(request,'blog/blog-single.html' , context)
+    else:
+        return HttpResponseRedirect(reverse('accounts:login'))
 
 def blog_category(request,cat_name):
     posts = post.objects.filter(status=True)

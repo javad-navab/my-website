@@ -42,3 +42,4 @@ def test(request):
             return HttpResponse('error')
     form = ContactForm()
     return render(request , 'website/test.html' , {'form': form})
+

@@ -158,6 +158,10 @@
           <form method="post" action="{% url 'blog:single' pid=post.id %}">
             {% csrf_token %}
             <input type="hidden" name="post" value="{{post.id}}">
+            {% if user.is_authenticated %}
+            <input type="text" name="name" value="{{request.user.username}}" />
+            <input type="email" name="email" value="{{request.user.email}}" />
+            {% else %}
             <div class="form-group form-inline">
               <div class="form-group col-lg-6 col-md-12 name">
                 <input
@@ -180,6 +184,7 @@
                 />
               </div>
             </div>
+            {% endif %}
             <div class="form-group">
               <input
                 type="text"

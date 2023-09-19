@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>sign up</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center mb-5">
+            <h2 class="heading-section">sign up</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-7 col-lg-5">
+            <div class="wrap">
+              <div
+                class="img"
+                style="background-image: url(images/bg-1.jpg)"
+              ></div>
+              <div class="sign up-wrap p-4 p-md-5">
+                <div class="d-flex">
+                  <div class="w-100">
+                    <h3 class="mb-4">sign up</h3>
+                  </div>
+                  <div class="w-100">
+                    <p class="social-media d-flex justify-content-end">
+                      <a
+                        href="#"
+                        class="social-icon d-flex align-items-center justify-content-center"
+                        ><span class="fa fa-facebook"></span
+                      ></a>
+                      <a
+                        href="#"
+                        class="social-icon d-flex align-items-center justify-content-center"
+                        ><span class="fa fa-twitter"></span
+                      ></a>
+                    </p>
+                  </div>
+                </div>
+                <form action="{% url 'accounts:signup' %}" method="post" class="signin-form">
+                  {% csrf_token %}
+                  {{ form.non_field_errors }}
+                  <div class="form-group mt-3">
+                    <input type="text" name="username" class="form-control" required />
+                    <label class="form-control-placeholder" for="username"
+                      >Username</label
+                    >
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="text" name="first_name" class="form-control" required />
+                    <label class="form-control-placeholder" for="first_name"
+                      >first name</label
+                    >
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="text" name="last_name" class="form-control" required />
+                    <label class="form-control-placeholder" for="last_name"
+                      >last name</label
+                    >
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="email" name="email" class="form-control" required />
+                    <label class="form-control-placeholder" for="email">Email</label>
+                    {{ form.email.errors }}
+                  </div>
+                  <div class="form-group">
+                    <input
+                      name="password1"
+                      type="password"
+                      class="form-control"
+                      required
+                    />
+                    <label class="form-control-placeholder" for="password"
+                      >Password</label
+                    >
+                    <span
+                    toggle="#password-field"
+                    class="fa fa-fw fa-eye field-icon toggle-password"
+                  ></span>
+                    </div>
+                    <div class="form-group">
+                    <input
+                      name="password2"
+                      type="password"
+                      class="form-control"
+                      required
+                    />
+                    <label class="form-control-placeholder" for="password"
+                      >Confirm Password</label
+                    >
+                    <span
+                      toggle="#password-field"
+                      class="fa fa-fw fa-eye field-icon toggle-password"
+                    ></span>
+                    {{ form.password2.errors }}
+                  </div>
+                  <div class="form-group">
+                    <button
+                      type="submit"
+                      class="form-control btn btn-primary rounded submit px-3"
+                    >
+                      sign up
+                    </button>
+                  </div>
+                  <div class="form-group ">
+                    <div class="text-md-center">
+                      <a href="#">Forgot Password</a>
+                    </div>
+                  </div>
+                </form>
+                <p class="text-center">
+                  have an account? <a href="{% url 'accounts:login' %}">Login</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="{% static 'js1/jquery.min.js' %}"></script>
+    <script src="{% static 'js1/popper.js' %}"></script>
+    <script src="{% static 'js1/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js1/main.js' %}"></script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854"
+      integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg=="
+      data-cf-beacon='{"rayId":"80583a1e8ebc3a78","version":"2023.8.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
