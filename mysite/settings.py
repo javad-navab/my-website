@@ -197,11 +197,11 @@ INTERNAL_IPS = [
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 #SMTP Configuration
-EMAIL_USE_TLS = False
+EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.mail.yahoo.com'
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = "javadnavabzadeh@yahoo.com"
 EMAIL_HOST_PASSWORD = '09352160302'
-# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
