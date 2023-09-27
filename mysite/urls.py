@@ -13,14 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path ,include
+from django.contrib import admin 
+from django.urls import path ,include , re_path 
 from website.views import *
-from django.conf import settings
+from blog.views import *
+from django.conf import settings 
 from django.conf.urls.static import static
 from website.sitemaps import StaticViewSitemap
 from django.contrib.sitemaps.views import sitemap
 from blog.sitemaps import BlogSitemap
+from django.views.generic import TemplateView
 
 from django.contrib.auth.views import (
     PasswordResetView, 
@@ -36,6 +38,7 @@ sitemaps = {
 }
 
 urlpatterns = [
+    # re_path(r'^$', TemplateView.as_view(template_name='website/coming_soon.html')),
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('',include('website.urls')),
